@@ -31,17 +31,17 @@ const CATEGORIES = [
 ];
 
 const ADVANTAGES = [
-  { icon: "Shield", title: "Гарантия 3 года", desc: "На всю технику и комплектующие" },
-  { icon: "Wrench", title: "Сервис 24/7", desc: "Выезд мастера в течение 2 часов" },
-  { icon: "Truck", title: "Доставка по РФ", desc: "Собственный автопарк доставки" },
-  { icon: "BadgeCheck", title: "Сертификация", desc: "Вся продукция сертифицирована ГОСТ" },
+  { icon: "Shield", title: "Гарантия на технику", desc: "Честная гарантия — обговариваем условия при покупке" },
+  { icon: "Wrench", title: "Помощь после продажи", desc: "Если что-то пошло не так — звоните, разберёмся" },
+  { icon: "Truck", title: "Доставка по договорённости", desc: "Привезём своим транспортом или организуем перевозку" },
+  { icon: "BadgeCheck", title: "Честная цена", desc: "Без накруток и скрытых платежей" },
 ];
 
 const STATS = [
-  { value: "150+", label: "Довольных клиентов" },
-  { value: "12", label: "Лет на рынке" },
-  { value: "500+", label: "Единиц техники" },
-  { value: "48 ч", label: "Среднее время поставки" },
+  { value: "50+", label: "Довольных клиентов" },
+  { value: "5+", label: "Лет работы" },
+  { value: "100+", label: "Прицепов продано" },
+  { value: "всегда", label: "На связи" },
 ];
 
 const REVIEWS = [
@@ -54,10 +54,10 @@ const REVIEWS = [
 ];
 
 const COMPANY_ADVANTAGES = [
-  { icon: "Factory", title: "Собственное производство", desc: "Изготавливаем прицепы на современном заводе площадью 8 000 м²" },
-  { icon: "Handshake", title: "Партнёрские цены", desc: "Работаем напрямую без посредников — экономия до 30%" },
-  { icon: "Clock", title: "Быстрое оформление", desc: "Полный пакет документов за 1 рабочий день" },
-  { icon: "Star", title: "Индивидуальный подход", desc: "Разработаем и изготовим прицеп под ваши задачи" },
+  { icon: "Handshake", title: "Работаем честно", desc: "Рассказываем всё как есть — плюсы и минусы каждой модели" },
+  { icon: "Phone", title: "Один звонок", desc: "Отвечаем лично, без колл-центров и скриптов" },
+  { icon: "Clock", title: "Без лишней волокиты", desc: "Договор, оплата, передача — всё просто и быстро" },
+  { icon: "Star", title: "Подберём под задачу", desc: "Поможем выбрать то, что действительно нужно" },
 ];
 
 const Index = () => {
@@ -135,25 +135,25 @@ const Index = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12" style={{ background: "#E67E22" }} />
-              <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Надёжная техника</span>
+              <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Продажа и аренда</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>
               ПРИЦЕПЫ ДЛЯ<br />
-              <span style={{ color: "#E67E22" }}>ЛЮБЫХ ЗАДАЧ</span>
+              <span style={{ color: "#E67E22" }}>ВАШЕГО ДЕЛА</span>
             </h1>
             <p className="text-lg mb-10 leading-relaxed" style={{ color: "#8A9BB5" }}>
-              Продажа и аренда прицепов, полуприцепов и спецтехники. Собственное производство, гарантия 3 года, доставка по всей России.
+              Продаём и сдаём в аренду прицепы и полуприцепы. Небольшой выбор, нормальные цены, отвечаем за то, что продаём.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#catalog" className="px-8 py-4 rounded font-bold text-sm tracking-widest uppercase transition-all hover:opacity-90" style={{ background: "#E67E22", color: "#FFFFFF", fontFamily: "'Oswald', sans-serif" }}>
                 СМОТРЕТЬ КАТАЛОГ
               </a>
               <a href="#form" className="px-8 py-4 rounded font-bold text-sm tracking-widest uppercase border-2 transition-all" style={{ borderColor: "#FFFFFF", color: "#FFFFFF", fontFamily: "'Oswald', sans-serif" }}>
-                КОНСУЛЬТАЦИЯ
+                НАПИСАТЬ НАМ
               </a>
             </div>
             <div className="flex gap-10 mt-12">
-              {[{ val: "150+", lbl: "Клиентов" }, { val: "12 лет", lbl: "На рынке" }, { val: "3 года", lbl: "Гарантия" }].map(s => (
+              {[{ val: "50+", lbl: "Клиентов" }, { val: "5+ лет", lbl: "На рынке" }, { val: "всегда", lbl: "На связи" }].map(s => (
                 <div key={s.val}>
                   <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>{s.val}</div>
                   <div className="text-xs" style={{ color: "#8A9BB5" }}>{s.lbl}</div>
@@ -184,16 +184,16 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-px w-12" style={{ background: "#E67E22" }} />
-                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>О компании</span>
+                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>О нас</span>
               </div>
               <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: "'Oswald', sans-serif", color: "#1A2A4A" }}>
-                12 ЛЕТ СТРОИМ<br />ДОВЕРИЕ КЛИЕНТОВ
+                НЕБОЛЬШОЙ БИЗНЕС —<br />ЛИЧНЫЙ ПОДХОД
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "#4A5568" }}>
-                ПрицепГруп — российский производитель прицепного оборудования с 2012 года. Работаем напрямую с заводом и предлагаем лучшие цены без посредников.
+                Занимаемся прицепами уже несколько лет. Не огромная фирма, зато знаем каждую позицию в каталоге и честно говорим, что подойдёт, а что нет.
               </p>
               <p className="text-base leading-relaxed mb-8" style={{ color: "#4A5568" }}>
-                Собственный сервисный центр, склад запчастей и обученные специалисты гарантируют бесперебойную работу вашей техники.
+                Работаем без колл-центров: звонишь — отвечает живой человек, который сам разбирается в технике.
               </p>
               <a href="#contacts" className="inline-flex items-center gap-2 px-6 py-3 rounded font-bold text-sm tracking-wide uppercase transition-all hover:opacity-90" style={{ background: "#1A2A4A", color: "#FFFFFF", fontFamily: "'Oswald', sans-serif" }}>
                 Подробнее <Icon name="ArrowRight" size={16} />
@@ -224,7 +224,7 @@ const Index = () => {
               <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Каталог</span>
               <div className="h-px w-12" style={{ background: "#E67E22" }} />
             </div>
-            <h2 className="text-4xl font-bold" style={{ fontFamily: "'Oswald', sans-serif", color: "#1A2A4A" }}>НАША ПРОДУКЦИЯ</h2>
+            <h2 className="text-4xl font-bold" style={{ fontFamily: "'Oswald', sans-serif", color: "#1A2A4A" }}>ЧТО ЕСТЬ В НАЛИЧИИ</h2>
           </div>
 
           <div className="flex flex-wrap gap-2 justify-center mb-10">
@@ -292,7 +292,7 @@ const Index = () => {
               <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Почему мы</span>
               <div className="h-px w-12" style={{ background: "#E67E22" }} />
             </div>
-            <h2 className="text-4xl font-bold text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>НАШИ ПРЕИМУЩЕСТВА</h2>
+            <h2 className="text-4xl font-bold text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
@@ -318,7 +318,7 @@ const Index = () => {
               <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Отзывы</span>
               <div className="h-px w-12" style={{ background: "#E67E22" }} />
             </div>
-            <h2 className="text-4xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif", color: "#1A2A4A" }}>150+ ДОВОЛЬНЫХ КЛИЕНТОВ</h2>
+            <h2 className="text-4xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif", color: "#1A2A4A" }}>ЧТО ГОВОРЯТ КЛИЕНТЫ</h2>
             <div className="flex items-center justify-center gap-1 mt-3">
               {[1,2,3,4,5].map(i => <Icon key={i} name="Star" size={20} style={{ color: "#E67E22" }} />)}
               <span className="text-sm font-semibold ml-2" style={{ color: "#1A2A4A" }}>4.9 из 5</span>
@@ -356,37 +356,37 @@ const Index = () => {
             <div className="p-10 md:p-14">
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-px w-12" style={{ background: "#E67E22" }} />
-                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Консультация</span>
+                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#E67E22" }}>Оставить заявку</span>
               </div>
-              <h2 className="text-3xl font-bold text-white mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h2>
-              <p className="text-sm mb-8" style={{ color: "#8A9BB5" }}>Специалист перезвонит в течение 15 минут и поможет выбрать подходящий прицеп.</p>
+              <h2 className="text-3xl font-bold text-white mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>НАПИШИТЕ НАМ</h2>
+              <p className="text-sm mb-8" style={{ color: "#8A9BB5" }}>Оставьте контакты и коротко опишите, что нужно — свяжемся и всё обсудим.</p>
 
               {formSent ? (
                 <div className="text-center py-8">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(230,126,34,0.15)" }}>
                     <Icon name="CheckCircle" size={32} style={{ color: "#E67E22" }} />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Заявка отправлена!</h3>
-                  <p style={{ color: "#8A9BB5" }}>Мы свяжемся с вами в течение 15 минут.</p>
+                  <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Получили заявку!</h3>
+                  <p style={{ color: "#8A9BB5" }}>Скоро свяжемся с вами.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Ваше имя</label>
-                      <input type="text" required placeholder="Иван Петров" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-lg text-sm outline-none" style={{ background: "#243660", border: "1px solid rgba(255,255,255,0.1)", color: "#FFFFFF" }} />
+                      <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Как вас зовут</label>
+                      <input type="text" required placeholder="Иван" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-lg text-sm outline-none" style={{ background: "#243660", border: "1px solid rgba(255,255,255,0.1)", color: "#FFFFFF" }} />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Телефон</label>
+                      <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Телефон или мессенджер</label>
                       <input type="tel" required placeholder="+7 (999) 000-00-00" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-lg text-sm outline-none" style={{ background: "#243660", border: "1px solid rgba(255,255,255,0.1)", color: "#FFFFFF" }} />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Комментарий</label>
-                    <textarea rows={3} placeholder="Расскажите о ваших задачах..." value={formData.comment} onChange={e => setFormData({ ...formData, comment: e.target.value })} className="w-full px-4 py-3 rounded-lg text-sm outline-none resize-none" style={{ background: "#243660", border: "1px solid rgba(255,255,255,0.1)", color: "#FFFFFF" }} />
+                    <label className="block text-xs font-medium mb-2" style={{ color: "#8A9BB5" }}>Что вас интересует</label>
+                    <textarea rows={3} placeholder="Например: нужен бортовой прицеп на 5 тонн, или просто хочу узнать цены..." value={formData.comment} onChange={e => setFormData({ ...formData, comment: e.target.value })} className="w-full px-4 py-3 rounded-lg text-sm outline-none resize-none" style={{ background: "#243660", border: "1px solid rgba(255,255,255,0.1)", color: "#FFFFFF" }} />
                   </div>
                   <button type="submit" className="w-full py-4 rounded-lg font-bold text-sm tracking-widest uppercase transition-all hover:opacity-90" style={{ background: "#E67E22", color: "#FFFFFF", fontFamily: "'Oswald', sans-serif" }}>
-                    ОТПРАВИТЬ ЗАЯВКУ
+                    ОТПРАВИТЬ
                   </button>
                   <p className="text-center text-xs" style={{ color: "#8A9BB5" }}>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
                 </form>
@@ -492,7 +492,7 @@ const Index = () => {
 
           <div className="h-px mb-6" style={{ background: "rgba(255,255,255,0.08)" }} />
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <span className="text-xs" style={{ color: "#8A9BB5" }}>© 2024 ПрицепГруп. Все права защищены.</span>
+            <span className="text-xs" style={{ color: "#8A9BB5" }}>© 2024 ПрицепГруп</span>
             <div className="flex gap-6">
               <a href="#" className="text-xs hover:text-white transition-colors" style={{ color: "#8A9BB5" }}>Политика конфиденциальности</a>
               <a href="#" className="text-xs hover:text-white transition-colors" style={{ color: "#8A9BB5" }}>Публичная оферта</a>
